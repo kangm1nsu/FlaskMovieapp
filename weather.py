@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-temp = ""
-
 def callWeather():
     uri = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EB%82%A0%EC%94%A8"
     response = requests.get(uri)
@@ -12,7 +10,3 @@ def callWeather():
     temp = target.text
     dictTemp = {'temp' : temp}
     return dictTemp
-
-
-
-
